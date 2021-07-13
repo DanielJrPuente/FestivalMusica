@@ -1,0 +1,30 @@
+{
+  "name": "festivalmusica_inicio",
+  "version": "1.0.0",
+  "description": "Festival de musica",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DanielJrPuente/FestivalMusical.git"
+  },
+  "keywords": [
+    "SASS",
+    "Gulp",
+    "Web",
+    "Desing"
+  ],
+  "author": "Daniel Junior Puente Martinez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DanielJrPuente/FestivalMusical/issues"
+  },
+  "homepage": "https://github.com/DanielJrPuente/FestivalMusical#readme",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-sass": "^5.0.0",
+    "sass": "^1.35.2"
+  }
+}
