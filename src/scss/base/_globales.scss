@@ -10,7 +10,7 @@ body {
   font-size: 1.6rem;
 }
 p {
-  font-size: 2rem;
+  font-size: 1.8rem;
   color: $negro;
 }
 .contenedor {
@@ -26,10 +26,25 @@ img {
 }
 h1 {
   font-size: 4rem;
+  font-weight: $black;
 }
 h2 {
   font-size: 3.6rem;
 }
 h3 {
   font-size: 3rem;
+}
+h1, h2, h3 {
+  margin: 0;
+}
+
+body {
+  font-family: $fuentePrincipal;
+}
+
+h1 {
+  font-family: $fuentePrincipal;
+}
+p {
+  font-family: $fuentePrincipal;
 }
