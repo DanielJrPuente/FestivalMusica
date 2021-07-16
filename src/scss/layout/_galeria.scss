@@ -10,7 +10,7 @@
   padding: 0;
   list-style: none;
   margin-top: 5rem;
-  @include grid(2, 5rem);
+  @include grid(2, 2rem);
 
   @include tablet{
     @include grid(4, 2.5rem);

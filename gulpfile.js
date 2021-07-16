@@ -14,6 +14,7 @@ function css(){
       outputStyle: "expanded"
     }))
     .pipe(dest("./build/css"))
+    .pipe(notify({message: 'SCSS compilado'}));
 }
 
 
@@ -26,13 +27,15 @@ function minificarCSS(){
       outputStyle: 'compressed'
     }))
     .pipe(dest("./build/css"))
+    .pipe(notify({message: 'CSS minificado'}));
 }
 
 //
 function javascript() {
   return src("./src/js/**/*.js")
     .pipe(concat('scripts.js'))
-    .pipe(dest("./build/js"));
+    .pipe(dest("./build/js"))
+    .pipe(notify({message: 'Javascript compilado'}));
 }
 
 //Minificar imagenes
