@@ -351,6 +351,9 @@ body {
   font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
 }
+body.fijar-body {
+  overflow: hidden;
+}
 
 p {
   font-size: 1.8rem;
@@ -398,6 +401,14 @@ h1 {
 
 p {
   font-family: "Montserrat", sans-serif;
+}
+
+.bg-verde {
+  background-color: #4CB8B3;
+}
+
+.bg-amarillo {
+  background-color: #FEF46B;
 }
 
 .header {
@@ -503,4 +514,134 @@ p {
 }
 .contenido-festival .texto {
   line-height: 1.5;
+}
+
+.lineup {
+  background-color: #F53756;
+  padding: 5rem 0;
+}
+.lineup h3, .lineup p {
+  text-align: center;
+  color: #fff;
+}
+.lineup .dia {
+  text-transform: uppercase;
+  margin: 5rem 0;
+}
+
+@media (min-width: 768px) {
+  .ecenarios-contenedor {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 5rem;
+  }
+}
+.ecenarios-contenedor .ecenario {
+  padding-top: 2.5rem;
+}
+.ecenarios-contenedor .nombre-ecenario {
+  color: #000;
+  font-size: 2rem;
+  font-weight: 300;
+}
+.ecenarios-contenedor .nombre-ecenario:after {
+  content: "";
+  width: 20rem;
+  height: 10rem;
+  display: block;
+  margin: 2rem auto 0 auto;
+  background-size: 15rem;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.edm .nombre-ecenario:after {
+  background-image: url(../img/icono_edm.png);
+}
+
+.rock .nombre-ecenario:after {
+  background-image: url(../img/icono_rock.png);
+}
+
+.calendario {
+  padding: 0;
+  list-style: none;
+}
+.calendario li {
+  padding: 2.5rem;
+  font-weight: 700;
+}
+.calendario li span {
+  font-weight: 400;
+}
+
+.bg-verde .calendario li:nth-child(odd) {
+  background-color: #3b9691;
+}
+
+.bg-amarillo .calendario li:nth-child(odd) {
+  background-color: #fef038;
+}
+
+.galeria {
+  padding: 5rem 0;
+}
+.galeria h3 {
+  text-align: center;
+}
+
+.galeria-imagenes {
+  padding: 0;
+  list-style: none;
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5rem;
+}
+@media (min-width: 768px) {
+  .galeria-imagenes {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.5rem;
+  }
+}
+@media (min-width: 1200px) {
+  .galeria-imagenes {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2.5rem;
+  }
+}
+
+.overley {
+  position: fixed;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: grid;
+  place-items: center;
+}
+.overley img {
+  width: 90%;
+  height: auto;
+}
+@media (min-width: 768px) {
+  .overley img {
+    width: 60%;
+  }
+}
+
+.bt-cerrar {
+  width: 5rem;
+  height: 5rem;
+  background-color: #fff;
+  display: grid;
+  place-items: center;
+  font-size: 3rem;
+  font-weight: 900;
+  border-radius: 50%;
+}
+.bt-cerrar:hover {
+  cursor: pointer;
 }
