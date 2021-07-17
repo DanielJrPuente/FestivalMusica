@@ -1,7 +1,7 @@
 # FestivalMusical
 Este es un proyecto de practica para el uso de sass y de gulp 
 
-En este proyecto se pone en prctica sass y se aprovechan todos sus beneficios y utilidades.
+En este proyecto se pone en practica sass y se aprovechan todos sus beneficios y utilidades.
 
 Y se pone en uso gulp para agilisar las tareas de compilamiento de sass y javaScript y de minificacion de imagenes 
 tabien se usa javascript para la creacion de una de las secciones del proyecto.

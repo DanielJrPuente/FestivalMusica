@@ -5,14 +5,27 @@ const notify = require('gulp-notify');
 const webp = require('gulp-webp');
 const concat = require('gulp-concat');
 
+// Utilidades
+
+const autoprefixer = require('autoprefixer');
+const postcss = require('gulp-postcss');
+const cssnano = require('cssnano');
+const sourcemaps = require('gulp-sourcemaps');
+
+// Utilidades JS
+
+const terser = require('gulp-terser-js');
+const rename = require('gulp-rename');
+
 
 // Funsion que compila sass
 
 function css(){
   return src("./src/scss/app.scss")
-    .pipe(sass({
-      outputStyle: "expanded"
-    }))
+    .pipe(sourcemaps.init())
+    .pipe(sass())
+    .pipe(postcss([autoprefixer(), cssnano()]))
+    .pipe(sourcemaps.write("."))
     .pipe(dest("./build/css"))
     .pipe(notify({message: 'SCSS compilado'}));
 }
@@ -23,9 +36,8 @@ function css(){
 
 function minificarCSS(){
   return src("./src/scss/app.scss")
-    .pipe(sass({
-      outputStyle: 'compressed'
-    }))
+    .pipe(sass())
+    .pipe(postcss([autoprefixer(), cssnano()]))
     .pipe(dest("./build/css"))
     .pipe(notify({message: 'CSS minificado'}));
 }
@@ -33,7 +45,10 @@ function minificarCSS(){
 //
 function javascript() {
   return src("./src/js/**/*.js")
+    .pipe(sourcemaps.init())
     .pipe(concat('scripts.js'))
+    .pipe(terser())
+    .pipe(sourcemaps.write("."))
     .pipe(dest("./build/js"))
     .pipe(notify({message: 'Javascript compilado'}));
 }

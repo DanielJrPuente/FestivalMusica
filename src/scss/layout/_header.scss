@@ -6,6 +6,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+      
     }
   }
   h1 {
@@ -15,6 +16,15 @@
     @include tablet {
       margin-bottom: 0;
     }
+    
+    &.remove {
+      display: none;
+    }
+  }
+  &.fijo {
+    position: fixed;
+    width: 100%;
+    box-shadow: 0 .3rem .3rem #333;
   }
 }
 .navegacion-principal {
